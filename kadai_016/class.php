@@ -14,17 +14,22 @@
       // プロパティを定義する
       private $name;
       private $price;
-      // メソッドを定義する
+
       public function show_price(int $price) {
+        $this->price =$price;
+      }
+      
+      // メソッドを定義する
+      public function __construct(string $name, int $price) {
+        $this->name = $name;
         $this->price = $price;
     }
-    public function __construct(string $name, int $price) {
-      $this->name = $name;
-      $this->price =$price;
-    }
-    }
+  }
+        // インスタンス化
     $food = new Food('potato',250);
+
     print_r($food);
+  
     echo '<br>';
 
   //アニマル
@@ -34,8 +39,13 @@
       private $name;
       private $height;
       private $weight;
+
+      public function show_height(int $height) {
+        $this->height = $height;
+    }
+
       // メソッドを定義する
-      public function __construct(string $name, int $height, string $weight) {
+      public function __construct(string $name, int $height, int $weight) {
         $this->name = $name;
         $this->height = $height;
         $this->weight = $weight;
